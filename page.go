@@ -437,16 +437,16 @@ func (page *repeatedPage) Values() ValueReader {
 }
 
 func (page *repeatedPage) Slice(i, j int64) Page {
-	numRows := page.NumRows()
-	if i < 0 || i > numRows {
-		panic(errPageBoundsOutOfRange(i, j, numRows))
-	}
-	if j < 0 || j > numRows {
-		panic(errPageBoundsOutOfRange(i, j, numRows))
-	}
-	if i > j {
-		panic(errPageBoundsOutOfRange(i, j, numRows))
-	}
+	// numRows := page.NumRows()
+	// if i < 0 || i > numRows {
+	// 	panic(errPageBoundsOutOfRange(i, j, numRows))
+	// }
+	// if j < 0 || j > numRows {
+	// 	panic(errPageBoundsOutOfRange(i, j, numRows))
+	// }
+	// if i > j {
+	// 	panic(errPageBoundsOutOfRange(i, j, numRows))
+	// }
 
 	maxRepetitionLevel := page.maxRepetitionLevel
 	maxDefinitionLevel := page.maxDefinitionLevel
